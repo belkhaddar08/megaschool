@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources — Physique-Chimie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">⚛️</span>
+            <span class="brand-text">Physique-Chimie</span>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="exercices.html">Exercices</a></li>
+            <li><a href="devoirs.html">Devoirs</a></li>
+            <li><a href="ressources.html" class="active">Ressources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">🧰 Ressources Utiles</h1>
+
+        <div class="ressources-grid">
+            <div class="ressource-card">
+                <div class="ressource-icon">📐</div>
+                <h3>Tableau Périodique</h3>
+                <p>Tableau périodique interactif avec masses atomiques, numéros atomiques et propriétés.</p>
+                <a href="#" class="btn btn-small btn-primary">Consulter</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">📊</div>
+                <h3>Fiches de Formules</h3>
+                <p>Toutes les formules essentielles par niveau, classées par chapitre.</p>
+                <a href="#" class="btn btn-small btn-primary">Télécharger</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">⚗️</div>
+                <h3>Constantes Physiques</h3>
+                <p>Valeurs des constantes fondamentales : c, G, h, e, k, R, etc.</p>
+                <a href="#" class="btn btn-small btn-primary">Consulter</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">🎬</div>
+                <h3>Vidéos Explicatives</h3>
+                <p>Playlist de vidéos pédagogiques organisées par chapitre.</p>
+                <a href="#" class="btn btn-small btn-primary">Voir la playlist</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">🔬</div>
+                <h3>Simulations</h3>
+                <p>Simulations interactives de phénomènes physiques et chimiques.</p>
+                <a href="#" class="btn btn-small btn-primary">Explorer</a>
+            </div>
+
+            <div class="ressource-card">
+                <div class="ressource-icon">📚</div>
+                <h3>Bibliographie</h3>
+                <p>Manuels de référence et ouvrages recommandés pour approfondir.</p>
+                <a href="#" class="btn btn-small btn-primary">Voir la liste</a>
+            </div>
+        </div>
+
+        <section class="formules-section">
+            <h2 class="section-title">📋 Formules Essentielles</h2>
+            <div class="formules-list">
+                <div class="formule-item">
+                    <span class="formule-name">Loi d'Ohm</span>
+                    <span class="formule-math">$$U = R \\times I$$</span>
+                </div>
+                <div class="formule-item">
+                    <span class="formule-name">Énergie cinétique</span>
+                    <span class="formule-math">$$E_c = \\frac{1}{2}mv^2$$</span>
+                </div>
+                <div class="formule-item">
+                    <span class="formule-name">Quantité de mouvement</span>
+                    <span class="formule-math">$$\\vec{p} = m\\vec{v}$$</span>
+                </div>
+                <div class="formule-item">
+                    <span class="formule-name">Force électrostatique</span>
+                    <span class="formule-math">$$F = k\\frac{|q_1 q_2|}{r^2}$$</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">⚛️</span>
+                <span>Physique-Chimie — M. Belkhaddar Mohammed</span>
+            </div>
+            <p class="footer-copy">© 2026 — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
