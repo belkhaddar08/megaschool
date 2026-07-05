@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoirs — Physique-Chimie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">⚛️</span>
+            <span class="brand-text">Physique-Chimie</span>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="exercices.html">Exercices</a></li>
+            <li><a href="devoirs.html" class="active">Devoirs</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">📝 Devoirs & Contrôles</h1>
+        
+        <div class="devoirs-tabs">
+            <button class="tab-btn active" onclick="switchTab('ds', this)">Devoirs Surveillés</button>
+            <button class="tab-btn" onclick="switchTab('examens', this)">Examens Blancs</button>
+            <button class="tab-btn" onclick="switchTab('rattrapage', this)">Rattrapage</button>
+        </div>
+
+        <div class="tab-content" id="tab-ds">
+            <div class="devoirs-list">
+                <div class="devoir-item">
+                    <div class="devoir-info">
+                        <h4>DS n°1 — Semestre 1</h4>
+                        <p class="devoir-niveau">Tronc Commun • Durée : 2h</p>
+                        <p class="devoir-chapitres">Chapitres 1 à 3</p>
+                    </div>
+                    <div class="devoir-actions">
+                        <a href="#" class="btn btn-small btn-primary">Sujet PDF</a>
+                        <a href="#" class="btn btn-small btn-secondary">Corrigé PDF</a>
+                    </div>
+                </div>
+                <div class="devoir-item">
+                    <div class="devoir-info">
+                        <h4>DS n°2 — Semestre 1</h4>
+                        <p class="devoir-niveau">1ère Bac • Durée : 2h</p>
+                        <p class="devoir-chapitres">Chapitres 1 à 2</p>
+                    </div>
+                    <div class="devoir-actions">
+                        <a href="#" class="btn btn-small btn-primary">Sujet PDF</a>
+                        <a href="#" class="btn btn-small btn-secondary">Corrigé PDF</a>
+                    </div>
+                </div>
+                <div class="devoir-item">
+                    <div class="devoir-info">
+                        <h4>DS n°1 — Semestre 2</h4>
+                        <p class="devoir-niveau">2ème Bac • Durée : 3h</p>
+                        <p class="devoir-chapitres">Chapitres 1 à 3</p>
+                    </div>
+                    <div class="devoir-actions">
+                        <a href="#" class="btn btn-small btn-primary">Sujet PDF</a>
+                        <a href="#" class="btn btn-small btn-secondary">Corrigé PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="tab-examens">
+            <div class="devoirs-list">
+                <div class="devoir-item">
+                    <div class="devoir-info">
+                        <h4>Examen Blanc — Juin 2026</h4>
+                        <p class="devoir-niveau">2ème Bac • Durée : 4h</p>
+                        <p class="devoir-chapitres">Programme complet</p>
+                    </div>
+                    <div class="devoir-actions">
+                        <a href="#" class="btn btn-small btn-primary">Sujet PDF</a>
+                        <a href="#" class="btn btn-small btn-secondary">Corrigé PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="tab-rattrapage">
+            <div class="devoirs-list">
+                <div class="devoir-item">
+                    <div class="devoir-info">
+                        <h4>Série de rattrapage — Électricité</h4>
+                        <p class="devoir-niveau">Tronc Commun • 15 exercices</p>
+                    </div>
+                    <div class="devoir-actions">
+                        <a href="#" class="btn btn-small btn-primary">Télécharger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">⚛️</span>
+                <span>Physique-Chimie — M. Belkhaddar Mohammed</span>
+            </div>
+            <p class="footer-copy">© 2026 — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
