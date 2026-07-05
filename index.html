@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physique-Chimie — M. Belkhaddar Mohammed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">⚛️</span>
+            <span class="brand-text">Physique-Chimie</span>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="exercices.html">Exercices</a></li>
+            <li><a href="devoirs.html">Devoirs</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Physique-Chimie</h1>
+            <p class="hero-subtitle">Cours, exercices et ressources pour le lycée marocain</p>
+            <p class="hero-prof">Professeur : <strong>M. Belkhaddar Mohammed</strong></p>
+            <div class="hero-buttons">
+                <a href="cours.html" class="btn btn-primary">📚 Voir les Cours</a>
+                <a href="exercices.html" class="btn btn-secondary">✏️ Séries d'Exercices</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Niveaux -->
+    <section class="niveaux-section">
+        <h2 class="section-title">📖 Choisissez votre niveau</h2>
+        <div class="niveaux-grid">
+            <a href="cours.html#tronc-commun" class="niveau-card">
+                <div class="niveau-icon">🧪</div>
+                <h3>Tronc Commun</h3>
+                <p>Introduction à la physique-chimie : mécanique, électricité, chimie organique de base</p>
+                <span class="niveau-tag">Niveau débutant</span>
+            </a>
+            <a href="cours.html#premiere-bac" class="niveau-card">
+                <div class="niveau-icon">⚡</div>
+                <h3>1<sup>ère</sup> Bac</h3>
+                <p>Électrocinétique, optique, réactions chimiques, transformations de la matière</p>
+                <span class="niveau-tag">Niveau intermédiaire</span>
+            </a>
+            <a href="cours.html#deuxieme-bac" class="niveau-card">
+                <div class="niveau-icon">🔬</div>
+                <h3>2<sup>ème</sup> Bac</h3>
+                <p>Mécanique du point, électromagnétisme, chimie avancée, préparation au baccalauréat</p>
+                <span class="niveau-tag">Niveau avancé</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Derniers ajouts -->
+    <section class="recent-section">
+        <h2 class="section-title">🆕 Derniers Ajouts</h2>
+        <div class="recent-grid">
+            <div class="recent-card">
+                <span class="recent-badge">Nouveau</span>
+                <h4>Série d'exercices : Électrocinétique</h4>
+                <p class="recent-meta">1ère Bac • 12 exercices • Niveau moyen</p>
+                <a href="exercices.html" class="recent-link">Voir →</a>
+            </div>
+            <div class="recent-card">
+                <span class="recent-badge">Nouveau</span>
+                <h4>Cours : Réactions d'oxydoréduction</h4>
+                <p class="recent-meta">2ème Bac • Chapitre 3 • PDF disponible</p>
+                <a href="cours.html" class="recent-link">Voir →</a>
+            </div>
+            <div class="recent-card">
+                <span class="recent-badge">Nouveau</span>
+                <h4>Devoir surveillé n°2 — Corrigé</h4>
+                <p class="recent-meta">Tronc Commun • Semestre 2</p>
+                <a href="devoirs.html" class="recent-link">Voir →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">⚛️</span>
+                <span>Physique-Chimie — M. Belkhaddar Mohammed</span>
+            </div>
+            <p class="footer-copy">© 2026 — Tous droits réservés. Site éducatif pour le lycée marocain.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
