@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices — Physique-Chimie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">⚛️</span>
+            <span class="brand-text">Physique-Chimie</span>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="exercices.html" class="active">Exercices</a></li>
+            <li><a href="devoirs.html">Devoirs</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">✏️ Séries d'Exercices</h1>
+        
+        <div class="search-bar">
+            <input type="text" id="searchExos" placeholder="🔍 Rechercher une série d'exercices..." onkeyup="searchExos()">
+        </div>
+
+        <!-- Filtres -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterExos('all', this)">Tous</button>
+            <button class="filter-btn" onclick="filterExos('tronc', this)">Tronc Commun</button>
+            <button class="filter-btn" onclick="filterExos('premiere', this)">1ère Bac</button>
+            <button class="filter-btn" onclick="filterExos('deuxieme', this)">2ème Bac</button>
+        </div>
+
+        <div class="exercices-grid" id="exercicesGrid">
+            <!-- Tronc Commun -->
+            <div class="exo-card" data-niveau="tronc">
+                <div class="exo-header">
+                    <span class="exo-niveau">Tronc Commun</span>
+                    <span class="exo-difficulty facile">Facile</span>
+                </div>
+                <h3>Série 1 : Grandeurs physiques</h3>
+                <p class="exo-desc">10 exercices sur les conversions, incertitudes et calculs d'erreurs.</p>
+                <div class="exo-meta">
+                    <span>📄 10 exercices</span>
+                    <span>⏱️ ~45 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+
+            <div class="exo-card" data-niveau="tronc">
+                <div class="exo-header">
+                    <span class="exo-niveau">Tronc Commun</span>
+                    <span class="exo-difficulty moyen">Moyen</span>
+                </div>
+                <h3>Série 2 : Mouvement et forces</h3>
+                <p class="exo-desc">8 exercices sur les lois de Newton et le mouvement rectiligne uniforme.</p>
+                <div class="exo-meta">
+                    <span>📄 8 exercices</span>
+                    <span>⏱️ ~60 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+
+            <!-- 1ère Bac -->
+            <div class="exo-card" data-niveau="premiere">
+                <div class="exo-header">
+                    <span class="exo-niveau">1ère Bac</span>
+                    <span class="exo-difficulty moyen">Moyen</span>
+                </div>
+                <h3>Série 3 : Électrocinétique</h3>
+                <p class="exo-desc">12 exercices sur les dipôles passifs, loi d'Ohm et associations.</p>
+                <div class="exo-meta">
+                    <span>📄 12 exercices</span>
+                    <span>⏱️ ~75 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+
+            <div class="exo-card" data-niveau="premiere">
+                <div class="exo-header">
+                    <span class="exo-niveau">1ère Bac</span>
+                    <span class="exo-difficulty difficile">Difficile</span>
+                </div>
+                <h3>Série 4 : Optique géométrique</h3>
+                <p class="exo-desc">10 exercices sur les lentilles, miroirs et constructions géométriques.</p>
+                <div class="exo-meta">
+                    <span>📄 10 exercices</span>
+                    <span>⏱️ ~90 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+
+            <!-- 2ème Bac -->
+            <div class="exo-card" data-niveau="deuxieme">
+                <div class="exo-header">
+                    <span class="exo-niveau">2ème Bac</span>
+                    <span class="exo-difficulty difficile">Difficile</span>
+                </div>
+                <h3>Série 5 : Mécanique du point</h3>
+                <p class="exo-desc">15 exercices sur les équations horaires, énergie cinétique et potentielle.</p>
+                <div class="exo-meta">
+                    <span>📄 15 exercices</span>
+                    <span>⏱️ ~120 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+
+            <div class="exo-card" data-niveau="deuxieme">
+                <div class="exo-header">
+                    <span class="exo-niveau">2ème Bac</span>
+                    <span class="exo-difficulty difficile">Difficile</span>
+                </div>
+                <h3>Série 6 : Oxydoréduction</h3>
+                <p class="exo-desc">10 exercices sur les piles, électrolyse et équations redox.</p>
+                <div class="exo-meta">
+                    <span>📄 10 exercices</span>
+                    <span>⏱️ ~100 min</span>
+                </div>
+                <div class="exo-actions">
+                    <a href="#" class="btn btn-small btn-primary">Télécharger PDF</a>
+                    <a href="#" class="btn btn-small btn-secondary">Voir en ligne</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">⚛️</span>
+                <span>Physique-Chimie — M. Belkhaddar Mohammed</span>
+            </div>
+            <p class="footer-copy">© 2026 — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
