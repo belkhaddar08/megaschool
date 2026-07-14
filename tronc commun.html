@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours — Physique-Chimie</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">⚛️</span>
+            <span class="brand-text">Physique-Chimie</span>
+        </div>
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cours.html" class="active">Cours</a></li>
+            <li><a href="exercices.html">Exercices</a></li>
+            <li><a href="devoirs.html">Devoirs</a></li>
+            <li><a href="ressources.html">Ressources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <main class="page-content">
+        <h1 class="page-title">📚 Cours par Niveau</h1>
+        
+        <!-- Barre de recherche -->
+        <div class="search-bar">
+            <input type="text" id="searchCours" placeholder="🔍 Rechercher un cours, un chapitre..." onkeyup="searchCours()">
+        </div>
+
+        <!-- Tronc Commun -->
+        <section class="niveau-block" id="tronc-commun">
+            <h2 class="niveau-title">🧪 Tronc Commun</h2>
+            <div class="chapitres-list">
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 1</span>
+                        <span class="chapitre-name">Grandeurs physiques et mesures</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="https://mega.nz/file/D0EWzB7b#5x_qUvRPo2vr3efBaYVGnjqynoIf2HDYFPJC2NX7pgo" class="doc-link">📄 Cours complet (PDF)</a></li>
+                            <li><a href="#" class="doc-link">📝 Résumé de cours</a></li>
+                            <li><a href="#" class="doc-link">🎬 Vidéo explicative</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 2</span>
+                        <span class="chapitre-name">Mouvement et forces</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                            <li><a href="#" class="doc-link">📝 Résumé de cours</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 3</span>
+                        <span class="chapitre-name">Électricité</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                            <li><a href="#" class="doc-link">📝 Résumé de cours</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 4</span>
+                        <span class="chapitre-name">Chimie organique de base</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1ère Bac -->
+        <section class="niveau-block" id="premiere-bac">
+            <h2 class="niveau-title">⚡ 1<sup>ère</sup> Bac</h2>
+            <div class="chapitres-list">
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 1</span>
+                        <span class="chapitre-name">Électrocinétique — Dipôles passifs</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                            <li><a href="#" class="doc-link">📝 Fiche de formules</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 2</span>
+                        <span class="chapitre-name">Électrocinétique — Dipôles actifs</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 3</span>
+                        <span class="chapitre-name">Optique géométrique</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 4</span>
+                        <span class="chapitre-name">Transformations chimiques</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2ème Bac -->
+        <section class="niveau-block" id="deuxieme-bac">
+            <h2 class="niveau-title">🔬 2<sup>ème</sup> Bac</h2>
+            <div class="chapitres-list">
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 1</span>
+                        <span class="chapitre-name">Mécanique du point matériel</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                            <li><a href="#" class="doc-link">📝 Fiche de formules</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 2</span>
+                        <span class="chapitre-name">Électromagnétisme</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 3</span>
+                        <span class="chapitre-name">Réactions d'oxydoréduction</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapitre-item">
+                    <div class="chapitre-header" onclick="toggleChapitre(this)">
+                        <span class="chapitre-num">Ch. 4</span>
+                        <span class="chapitre-name">Chimie organique avancée</span>
+                        <span class="chapitre-toggle">▼</span>
+                    </div>
+                    <div class="chapitre-content">
+                        <ul>
+                            <li><a href="#" class="doc-link">📄 Cours complet (PDF)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo">⚛️</span>
+                <span>Physique-Chimie — M. Belkhaddar Mohammed</span>
+            </div>
+            <p class="footer-copy">© 2026 — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
